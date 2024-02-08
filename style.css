@@ -1,0 +1,121 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
+body {
+  background-image: url("imagens/wallpaper.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.6);
+}
+
+a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+}
+
+.container {
+  display: flex;
+
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  min-width: 400px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+#links li {
+  width: 100%;
+  text-align: center;
+}
+
+#links li a {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #BB99DD;
+  border-radius: 8px;
+  transition: .2s all ease;
+}
+
+#links li a:hover {
+  scale: 1.1;
+  border: 2px solid #FFF;
+  background-color: #BB99DD;
+}
+
+#descricao{
+  color: #FFF;
+  max-width: 60ch;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#contato {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  transition: .2s all ease;
+}
+
+#contato:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 770px){
+  body {
+    background-position: center;
+    overflow: hidden;
+  }
+
+
+  #links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #links li a {
+    font-size: 18px;
+  }
+
+  .card {
+    min-width: 300px;
+    padding: 0 15px;
+    margin-bottom: 80px;
+  }
+
+  #descricao{
+    margin-top: 20px;
+  }
+
+  #contato {
+    position: absolute;
+    bottom:40px;
+    right: 20px;
+  }
+}
